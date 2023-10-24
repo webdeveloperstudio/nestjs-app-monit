@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { LoggerModule } from './modules/logger/logger.module';
+import { AppsModule } from './modules/apps/apps.module';
 
 @Module({
   imports: [
@@ -20,6 +21,7 @@ import { LoggerModule } from './modules/logger/logger.module';
       }),
     }),
     LoggerModule,
+    AppsModule,
   ],
   controllers: [AppController],
   providers: [AppService],

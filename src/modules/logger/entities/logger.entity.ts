@@ -9,22 +9,22 @@ export class LoggerEntity extends BaseEntity {
     @Column('enum', { enum: SoftwareEnum })
     public SoftwareName: string;
 
-    @Column()
+    @Column('text')
     public message: string;
 
-    @Column()
+    @Column('varchar')
     public level: string;
 
-    @Column()
+    @Column('timestamp')
     public timestamp: Date;
 
-    @Column()
+    @Column('varchar')
     public context: string;
 
-    @Column()
+    @Column('varchar')
     public url: string;
 
-    @Column()
+    @Column('array')
     public params: string;
 
     @Column()
